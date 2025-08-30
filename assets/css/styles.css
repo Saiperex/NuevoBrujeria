@@ -9,6 +9,7 @@
     --gold: #d4af37;
 
     --font-text: 'Roboto', sans-serif;
+    --font-text2: 'Chandra';
 }
 /*Datos generales*/
 *
@@ -216,9 +217,8 @@ body
 {
     width: 100%;
     overflow: hidden;
-    margin: 20px 0;
     background-color: var(--white);
-    padding: 20px 0;
+    padding: 70px 0;
 }
 .swiper-slide
 {
@@ -253,4 +253,59 @@ body
     border-radius: 5px;
     font-size: clamp(10px, 2.5vw, 15px);
     margin: 5px 0;
+}
+/*Sobre Mi*/
+
+.sobre_mi
+{
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+}
+.sobre_mi h2
+{
+    font-family: 'Chandra';
+    color: var(--white);
+    font-size: clamp(25px, 5vw, 50px);
+    margin: 20px 0;
+    text-align: center;
+}
+.sobre_mi_contenido
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sobre_mi_contenido img
+{
+    filter: grayscale(100%);
+    width: 50%;
+    min-width: 320px;
+}
+.sobre_mi_texto
+{
+    width: 50%;
+    min-width: 320px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    font-family: var(--font-text);
+    font-size: clamp(10px, 2.5vw, 20px);
+}
+.sobre_mi_texto a
+{
+    display: inline-block;
+    font-family: var(--font-text2);
+    color: var(--black);
+    background-color: var(--gold);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: clamp(10px, 2.5vw, 20px);
+    margin-top: 20px;
+    width: fit-content;
+    font-size: clamp(10px, 2.5vw, 20px);
 }

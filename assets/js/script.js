@@ -12,7 +12,7 @@ var swiper = new Swiper(".servicios_swiper", {
     centeredSlidesBounds: true,
     spaceBetween: 30,
     lazy: true,
-    loop: false,
+    loop: true,
     autoplay: {
         delay: 2500,
         disableOnInteraction: true,
