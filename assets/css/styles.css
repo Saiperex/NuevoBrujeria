@@ -583,8 +583,9 @@ body {
 }
 
 .filosofia_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
@@ -596,6 +597,10 @@ body {
   background-color: var(--black);
   border-radius: 15px;
   color: var(--white);
+  /* Añadido flex-basis para control responsive */
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: 300px;
 }
 
 .filosofia_item i {
@@ -733,8 +738,9 @@ body {
 }
 
 .proceso_pasos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
@@ -743,6 +749,10 @@ body {
 .paso {
   text-align: center;
   padding: 30px 20px;
+  /* Añadido flex-basis para control responsive */
+  flex: 1 1 200px;
+  min-width: 200px;
+  max-width: 250px;
 }
 
 .paso_numero {
@@ -822,8 +832,9 @@ body {
 }
 
 .testimonios_lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -835,6 +846,10 @@ body {
   padding: 30px;
   border-radius: 15px;
   text-align: center;
+  /* Añadido flex-basis para control responsive */
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 350px;
 }
 
 .testimonio_card p {
@@ -877,8 +892,9 @@ body {
 }
 
 .stats_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 800px;
   margin: 0 auto;
@@ -887,6 +903,9 @@ body {
 .stat_item {
   text-align: center;
   color: var(--white);
+  /* Añadido flex-basis para control responsive */
+  flex: 1 1 200px;
+  min-width: 200px;
 }
 
 .stat_numero {
@@ -938,8 +957,9 @@ body {
 .galeria_grid {
   padding: 60px 20px;
   background-color: var(--black);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -951,6 +971,10 @@ body {
   border-radius: 15px;
   height: 300px;
   cursor: pointer;
+  /* Añadido flex-basis para control responsive */
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 350px;
 }
 
 .galeria_item img {
@@ -1008,8 +1032,9 @@ body {
 }
 
 .proceso_pasos_visual {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
@@ -1018,6 +1043,10 @@ body {
 .paso_visual {
   text-align: center;
   padding: 30px 20px;
+  /* Añadido flex-basis para control responsive */
+  flex: 1 1 200px;
+  min-width: 200px;
+  max-width: 250px;
 }
 
 .paso_imagen {
@@ -1065,8 +1094,9 @@ body {
 }
 
 .elementos_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
@@ -1078,6 +1108,10 @@ body {
   background-color: var(--gray);
   border-radius: 15px;
   color: var(--white);
+  /* Añadido flex-basis para control responsive */
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: 300px;
 }
 
 .elemento_card i {
@@ -1263,8 +1297,9 @@ body {
 }
 
 .horarios_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   max-width: 800px;
   margin: 0 auto;
@@ -1276,6 +1311,10 @@ body {
   background-color: var(--black);
   border-radius: 15px;
   color: var(--white);
+  /* Añadido flex-basis para control responsive */
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: none;
 }
 
 .horario_item i {
@@ -1418,4 +1457,25 @@ body {
 
 .swiper-pagination-bullet-active {
   background-color: var(--gold-light);
+}
+
+/* Mejoras adicionales para responsividad en pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+  .filosofia_item,
+  .paso,
+  .testimonio_card,
+  .stat_item,
+  .galeria_item,
+  .paso_visual,
+  .elemento_card,
+  .horario_item {
+    flex: 1 1 100%;
+    min-width: 280px;
+    max-width: none;
+  }
+
+  .inicio {
+    /* Removido background-attachment fixed en móviles para mejor rendimiento */
+    background-attachment: scroll;
+  }
 }
