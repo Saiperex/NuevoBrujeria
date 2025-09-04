@@ -220,3 +220,40 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializar contadores
     animateCounters()
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Referencias a los elementos
+    const whatsappButton = document.getElementById("whatsapp-button");
+    const whatsappChat = document.getElementById("whatsapp-chat");
+    const chatHeader = document.getElementById("whatsapp-chat-header");
+    const closeButton = document.querySelector("#whatsapp-chat-header .close-btn");
+    const inputMessage = document.getElementById("whatsapp-chat-input");
+    const sendButton = document.getElementById("send-message");
+
+    // Mostrar el chat cuando se haga clic en el botón de WhatsApp
+    whatsappButton.addEventListener("click", function() {
+        whatsappChat.style.display = "block";
+        whatsappButton.style.display = "none"; // Ocultar el icono de WhatsApp
+    });
+
+    // Ocultar el chat cuando se haga clic en la "X"
+    closeButton.addEventListener("click", function() {
+        whatsappChat.style.display = "none";
+        whatsappButton.style.display = "flex"; // Mostrar el icono de WhatsApp
+        inputMessage.value = ''; // Limpiar el contenido del input
+    });
+
+    // Enviar el mensaje a WhatsApp
+    sendButton.addEventListener("click", function() {
+        const message = inputMessage.value.trim();
+        if (message) {
+            // Redirigir a WhatsApp con el mensaje
+            window.open(`https://wa.me/351XXXXXXX?text=${encodeURIComponent(message)}`, "_blank");
+            // Cerrar el chat y limpiar el input
+            whatsappChat.style.display = "none";
+            whatsappButton.style.display = "flex";
+            inputMessage.value = ''; // Limpiar el contenido del input
+        }
+    });
+});
+
