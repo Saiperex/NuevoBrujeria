@@ -1561,6 +1561,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: var(--font-text);
 }
 
 /* Estilo para la X de cerrar */
@@ -1574,6 +1575,7 @@ body {
     height: 300px;
     padding: 10px;
     overflow-y: auto;
+    font-family: var(--font-text);
 }
 
 /* Estilo para el área de entrada */
