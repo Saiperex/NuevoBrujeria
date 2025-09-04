@@ -26,7 +26,7 @@
 }
 
 body {
-  background-color: var(--black);
+  background-color: var(--white);
   line-height: 1.6;
 }
 
@@ -37,6 +37,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--black);
 }
 
 .cabecera_mid,
@@ -154,21 +155,16 @@ body {
   .menu_activo {
     left: 0%;
   }
-  .principal {
-    margin-top: 80px;
-  }
 }
 
 /* Principal */
 .principal {
   width: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Inicio */
 .inicio {
   width: 100%;
   display: flex;
@@ -176,7 +172,7 @@ body {
   justify-content: center;
   padding: 10px;
   background: url("../images/inicio.webp") no-repeat center center / cover;
-  min-height: 100vh;
+  
 }
 
 .inicio_centrar {
@@ -243,22 +239,39 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .servicios h2 {
   font-family: "Chandra";
-  color: var(--white);
+  color: var(--black);
   font-size: clamp(25px, 5vw, 50px);
   margin: 20px 0 40px 0;
   text-align: center;
 }
-
+.servicios p
+{
+  font-family: var(--font-text);
+  color: var(--gray-light);
+  font-size: clamp(20px, 4vw, 40px);
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 600px;
+}
+.servicios span
+{
+  font-family: var(--font-text);
+  color: var(--gold);
+  font-size: clamp(15px, 3vw, 25px);
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 800px;
+}
 .servicios_swiper {
   width: 100%;
   overflow: hidden;
   background-color: var(--white);
-  padding: 70px 0;
+  padding: 40px 0;
 }
 
 .swiper-slide {
@@ -267,7 +280,7 @@ body {
   padding: 20px;
   background-color: var(--black);
   border-radius: 10px;
-  margin: 0 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .servicio .imagen {
@@ -330,6 +343,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
@@ -339,6 +353,7 @@ body {
 .sobre_mi_contenido img {
   filter: grayscale(100%);
   width: 50%;
+  height: fit-content;
   min-width: 320px;
   border-radius: 10px;
 }
@@ -398,30 +413,38 @@ body {
 .testimonial_swiper {
   width: 90%;
   max-width: 800px;
+  overflow: hidden;
   margin-bottom: 40px;
 }
 
 .testimonial_item,
 .testimonial_item_grande {
-  background-color: var(--black);
+  background: linear-gradient(
+      135deg,
+      var(--black),
+      var(--gold-dark),
+      var(--gold)
+    );
   color: var(--white);
   padding: 30px;
   border-radius: 15px;
   text-align: center;
   font-family: var(--font-text);
-  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .testimonial_item p,
 .testimonial_item_grande p {
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: clamp(20, 2.5vw, 30px);
   margin-bottom: 20px;
   font-style: italic;
 }
 
 .testimonial_item h3,
 .testimonial_item_grande h3 {
-  color: var(--gold);
+  color: var(--black);
   font-family: "Chandra";
   font-size: clamp(16px, 3vw, 20px);
 }
@@ -523,6 +546,7 @@ body {
 
 /* Sobre mí detalle */
 .sobre_mi_detalle {
+  width: 100%;
   padding: 60px 20px;
   background-color: var(--black);
 }
@@ -624,6 +648,7 @@ body {
 
 /* CTA Contacto */
 .cta_contacto {
+  width: 100%;
   padding: 80px 20px;
   background: linear-gradient(135deg, var(--black) 0%, var(--gray) 100%);
   text-align: center;
@@ -646,7 +671,6 @@ body {
 /* Servicios grid */
 .servicios_grid {
   padding: 60px 20px;
-  background-color: var(--black);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1081,6 +1105,7 @@ body {
 
 /* Elementos descripción */
 .elementos_descripcion {
+  width: 100%;
   padding: 60px 20px;
   background-color: var(--black);
 }
@@ -1134,9 +1159,11 @@ body {
 }
 
 /* Contacto */
-.contacto_principal {
+.contacto_principal 
+{
+  width: 100%;
   padding: 60px 20px;
-  background-color: var(--black);
+  background: linear-gradient(90deg, var(--black) 0%, var(--gray) 100%);
 }
 
 .contacto_contenido {
