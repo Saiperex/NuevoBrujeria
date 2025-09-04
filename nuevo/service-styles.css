@@ -1,0 +1,1094 @@
+/* Service Page Specific Styles */
+.service-hero {
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+/* agregando soporte para imágenes de fondo en hero de servicios */
+.service-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.service-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.85), rgba(236, 72, 153, 0.75));
+}
+
+.service-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.service-icon-large {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+  background: var(--gradient-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-gold);
+}
+
+.service-icon-large i {
+  font-size: 3rem;
+  color: var(--dark-purple);
+}
+
+.service-hero h1 {
+  font-family: "Cinzel", serif;
+  font-size: 3rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-hero p {
+  font-size: 1.3rem;
+  color: var(--light-purple);
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.service-details {
+  padding: 80px 0;
+  background: var(--background-light);
+}
+
+.service-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.service-info h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2.2rem;
+  color: var(--dark-purple);
+  margin-bottom: 1.5rem;
+}
+
+.service-info h3 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+}
+
+.service-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.service-info ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.service-info ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--text-dark);
+}
+
+.service-info ul li::before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+.amarre-types {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.amarre-type {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.amarre-type:hover {
+  transform: translateY(-5px);
+}
+
+.amarre-type h4 {
+  color: var(--dark-purple);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.amarre-type h4 i {
+  color: var(--secondary-color);
+}
+
+.process-steps {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-3px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: var(--dark-purple);
+  margin-bottom: 0.5rem;
+}
+
+.service-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.price-card,
+.testimonial-card,
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.price-card:hover,
+.testimonial-card:hover,
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.price-card h3,
+.testimonial-card h3,
+.contact-card h3 {
+  font-family: "Cinzel", serif;
+  color: var(--dark-purple);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: "Cinzel", serif;
+}
+
+.price-card p {
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.includes {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.includes li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dark);
+}
+
+.includes li i {
+  color: var(--primary-color);
+}
+
+.testimonial-card blockquote {
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.testimonial-card blockquote::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--primary-color);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-family: "Cinzel", serif;
+}
+
+.testimonial-card cite {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.faq-section {
+  padding: 80px 0;
+  background: var(--background-dark);
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+}
+
+.faq-item h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  color: var(--light-purple);
+  line-height: 1.6;
+}
+
+.cta-section {
+  padding: 80px 0;
+  background: var(--gradient-primary);
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  color: var(--light-purple);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Service Hero Overlay */
+.service-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.85), rgba(236, 72, 153, 0.75));
+  z-index: 1;
+}
+
+/* Service Content Grid */
+.service-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Service Benefits */
+.service-benefits {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-item i {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.benefit-item h4 {
+  color: var(--dark-purple);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.benefit-item p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Service Card CTA */
+.service-card-cta {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.service-card-cta:hover {
+  transform: translateY(-5px);
+}
+
+.service-card-cta h3 {
+  font-family: "Cinzel", serif;
+  color: var(--dark-purple);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.price-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.price-info .price {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-family: "Cinzel", serif;
+  margin-bottom: 0.5rem;
+}
+
+.price-info .duration {
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.service-includes {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.service-includes li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.service-includes li i {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.btn-cta {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* Urgency Banner */
+.urgency-banner {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
+}
+
+.urgency-banner i {
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.urgency-banner h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.urgency-banner p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Testimonial Mini */
+.testimonial-mini {
+  background: rgba(139, 92, 246, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.testimonial-mini p {
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.testimonial-mini cite {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Protection Types Section */
+.protection-types {
+  padding: 80px 0;
+  background: var(--background-light);
+}
+
+.protection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.protection-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.protection-card:hover {
+  transform: translateY(-10px);
+}
+
+.protection-card i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.protection-card h3 {
+  font-family: "Cinzel", serif;
+  color: var(--dark-purple);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.protection-card p {
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.protection-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: "Cinzel", serif;
+}
+
+/* Service CTA Section */
+.service-cta {
+  padding: 80px 0;
+  background: var(--gradient-primary);
+  text-align: center;
+}
+
+.service-cta .cta-content h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.service-cta .cta-content p {
+  font-size: 1.2rem;
+  color: var(--light-purple);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Prosperity Packages Section */
+.prosperity-packages {
+  padding: 80px 0;
+  background: var(--background-dark);
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.package-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+}
+
+.package-card.featured {
+  border: 2px solid var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.package-ribbon {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.package-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.package-header h3 {
+  font-family: "Cinzel", serif;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.package-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-family: "Cinzel", serif;
+}
+
+.package-features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.package-features li {
+  padding: 0.7rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--light-purple);
+}
+
+.package-features li i {
+  color: var(--primary-color);
+}
+
+.package-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--gradient-gold);
+  color: var(--dark-purple);
+  text-decoration: none;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.package-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+}
+
+/* Success Stories Section */
+.success-stories {
+  padding: 80px 0;
+  background: var(--background-light);
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.story-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-content p {
+  font-style: italic;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.story-author strong {
+  color: var(--dark-purple);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.story-author span {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+/* Fade-in Animation Classes */
+.fade-in-up,
+.fade-in-down,
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-up {
+  transform: translateY(30px);
+}
+
+.fade-in-down {
+  transform: translateY(-30px);
+}
+
+.fade-in-left {
+  transform: translateX(-30px);
+}
+
+.fade-in-right {
+  transform: translateX(30px);
+}
+
+/* Fade-in delays */
+.fade-in-delay-1 {
+  transition-delay: 0.2s;
+}
+
+.fade-in-delay-2 {
+  transition-delay: 0.4s;
+}
+
+.fade-in-delay-3 {
+  transition-delay: 0.6s;
+}
+
+.fade-in-delay-4 {
+  transition-delay: 0.8s;
+}
+
+/* Visible state */
+.fade-in-up.visible,
+.fade-in-down.visible,
+.fade-in-left.visible,
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+/* Responsive Design for Service Pages */
+@media (max-width: 768px) {
+  .service-content {
+    grid-template-columns: 1fr;
+  }
+
+  .service-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .service-hero p {
+    font-size: 1.1rem;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .protection-grid,
+  .packages-grid,
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .package-card.featured {
+    transform: none;
+  }
+
+  .service-cta .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .service-hero p {
+    font-size: 1rem;
+  }
+
+  .protection-card,
+  .package-card,
+  .story-card {
+    padding: 1.5rem;
+  }
+
+  .package-price {
+    font-size: 2rem;
+  }
+}
+
+/* Service Process Section */
+.service-process {
+  margin: 3rem 0;
+}
+
+.service-process h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.8rem;
+  color: var(--dark-purple);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Process Steps Grid */
+.process-steps {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Prosperity Packages Section Styles */
+.prosperity-packages {
+  padding: 80px 0;
+  background: var(--background-dark);
+}
+
+.prosperity-packages .section-title {
+  color: var(--text-light);
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Success Stories Section Styles */
+.success-stories {
+  padding: 80px 0;
+  background: var(--background-light);
+}
+
+.success-stories .section-title {
+  color: var(--dark-purple);
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Protection Types Section Styles */
+.protection-types {
+  padding: 80px 0;
+  background: var(--background-light);
+}
+
+.protection-types .section-title {
+  color: var(--dark-purple);
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design for Service Pages */
+@media (max-width: 768px) {
+  .service-content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .service-hero {
+    padding: 100px 0 60px;
+    min-height: 50vh;
+  }
+
+  .service-hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .service-hero p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .protection-grid,
+  .packages-grid,
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cta-buttons .btn-primary,
+  .cta-buttons .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .package-card.featured {
+    transform: none;
+    margin: 0;
+  }
+
+  .service-cta .cta-content h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .service-cta .cta-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .benefit-item i {
+    font-size: 2rem;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .step-number {
+    align-self: center;
+  }
+
+  /* Corrigiendo overflow específico en secciones de servicios */
+  .service-details,
+  .protection-types,
+  .prosperity-packages,
+  .success-stories,
+  .service-cta {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-hero {
+    padding: 80px 0 40px;
+    min-height: 40vh;
+  }
+
+  .service-hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .service-hero p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .protection-card,
+  .package-card,
+  .story-card {
+    padding: 1.5rem;
+  }
+
+  .package-price {
+    font-size: 2rem;
+  }
+
+  .service-card-cta {
+    padding: 1.5rem;
+  }
+
+  .price-info .price {
+    font-size: 2rem;
+  }
+
+  .service-cta .cta-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-cta .cta-content p {
+    font-size: 1rem;
+  }
+
+  /* Asegurando que no haya overflow horizontal en móviles pequeños */
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+}
